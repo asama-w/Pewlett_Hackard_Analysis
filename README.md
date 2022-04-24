@@ -8,6 +8,8 @@ With the use of PostgresSQL, this analysis is carried out to help Bobby, who is 
 + **Analysis Language**: SQL
 + **Database System**: PostgresSQL
 + **Interface**: pgAdmin
++ **Query for this analysis (Challenge query)**: in `Queries` folder 
+	+ `Employee_Database_challenge.sql`
 ### Data
 + **All Employees Data**: in `Data/Module_Starter_Data` folder
 + **Analyzed Data Base (retiring employees)**: in `Data` folder
