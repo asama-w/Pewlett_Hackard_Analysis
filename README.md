@@ -55,7 +55,7 @@ There are the total of 1,549 retiring employees who are eligible for this mentor
 
 
 ## Analysis Summary
-Additional queries which can be used to for more insight of the data
+Additional queries to provide more insight of the data
 1) Determine the number of membership-eligible employees per title are shown as follow.
 ```sql
 -- Count number of eligible retiring employees for mentorship
@@ -82,5 +82,7 @@ Note:
 Total number of the current employees (all ages) is 240,124.
 While there are 72,458 employees who will be retired in the near future, which is approximately 30.2% of the total number of all employees. Thus, there will be 72,458 vacant roles which need to be filled.
 
-However, the total number of those who are eligible for the mentorshop program is only 1,549, which is only 2.1% of the number of future newly-hired.
+However, the total number of those who are eligible for the mentorship program is only 1,549, which is 2.1% of the number of future newly-hired.
 No manager eligible for the mentorship
+
+
