@@ -15,7 +15,7 @@ With the use of PostgresSQL, this analysis is carried out to help Bobby, who is 
 + **Analyzed Data Base (retiring employees)**: in `Data` folder
 	+ `retirement_titles.csv` : list of retiring employees with their current and previous titles information
 	+ `unique_titles.csv`: list of retiring employees with only their current title
-	+ `retiring_titles.csv`: number of retiring employees per department
+	+ `retiring_titles.csv`: number of retiring employees per title
 	+ `mentorship_eligibilty.csv`: list of retiring employees who are eligible for the mentorship program
 
 ## Analysis Results
