@@ -24,7 +24,7 @@ With the use of PostgresSQL, this analysis is carried out to help Bobby, who is 
 ### 1) The Retirement List with All Titles (retirement_titles)
 This `retirement_titles.csv` file is the complete list of the retirees including all of their titles during the years with the company, some of the employees have held several positions over the years, as seen in the duplicate of their name with different titles. There will be an excessive number of retiring employees if we were to count them  from this table due to the name duplications (the total number of retiring employee count from this table is 133,776). The following image shows the duplication of the employees name. Some employees changed positions over times so they have various titles under their names, while some employees remain in the same title up until the current period.
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirement_titles_table.png width="70%" height="70%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirement_titles_table.png width="80%" height="80%">
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiree_count_w_query_dupl.png width="60%" height="60%">
 
 ### 2) The Retirement List with Unique Title (unique_titles)
@@ -36,14 +36,14 @@ The `unique_titles.csv` contains the list of the retiring employees with only th
 ### 3) The Summary Retirement Count per Title (retiring_titles)
 This `retiring_titles.csv` is the summary table holds the retiring employees count per title, as shown in the following image. From the table, largest number of retiring employees are on the senior level (Senior Engineer and Senior Staff) which are accounted for 70.17% of total.
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirees_count_per_title.png width="25%" height="25%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirees_count_per_title.png width="30%" height="30%">
 
 
 ### 4) The Mentorship-Eligible Employee List (mentorship_eligibilty)
 The `mentorship_eligibilty.csv shows the list of employees who were born in the year 1965, which are considered as employees who are getting ready for the retirement and will be eligible for the mentorship program. (These eligible employees must be born between January 1, 1965 and December 31, 1965.)
 There are the total of 1,549 retiring employees who are eligible for this mentorship program.
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_table.png width="70%" height="70%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_table.png width="80%" height="80%">
 
 
 ## Analysis Summary
@@ -59,7 +59,7 @@ FROM retiring_titles;
 
 The table is now shown as in the following image.
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiring_titles_w_percentage.png width="30%" height="30%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiring_titles_w_percentage.png width="40%" height="40%">
 
 2) Determine the number of membership-eligible employees per title are shown as follow.
 ```sql
@@ -71,17 +71,32 @@ ORDER BY total_eligible_emp DESC;
 ```
 Total nunmber of membership-eligible employees is 1,549.
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_count_by_title.png width="30%" height="30%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_count_by_title.png width="40%" height="40%">
 
 3) Determine total number of employee in the company (no hired date boundary) for the comparison with the number of retiring employees
 
 ```sql
+-- Determine all current employees (no hire date limit)
+SELECT e.emp_no,
+    e.first_name,
+	e.last_name,
+    e.gender,
+    s.salary,
+    de.to_date
+INTO all_emp_info
+FROM employees as e
+INNER JOIN salaries as s
+ON (e.emp_no = s.emp_no)
+INNER JOIN dept_employee as de
+ON (e.emp_no = de.emp_no)
+WHERE (de.to_date = '9999-01-01');
+
 -- Determine number of all current employees
 SELECT count(emp_no) as all_emp_count
 FROM all_emp_info;
 ```
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/all_emp_count.png width="20%" height="20%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/all_emp_count.png width="30%" height="30%">
 
 ### Summary:
 
