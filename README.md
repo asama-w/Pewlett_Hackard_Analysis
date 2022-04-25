@@ -16,7 +16,7 @@ With the use of PostgresSQL, this analysis is carried out to help Bobby, who is 
 	+ `retirement_titles.csv` : list of retiring employees with their current and previous titles information
 	+ `unique_titles.csv`: list of retiring employees with only their current title
 	+ `retiring_titles.csv`: number of retiring employees per title
-	+ `mentorship_eligibilty.csv`: list of retiring employees who are eligible for the mentorship program
+	+ `mentorship_eligibility.csv`: list of retiring employees who are eligible for the mentorship program
 
 ## Analysis Results
 > The retiring employees in this analysis are the ones who were born between the year 1952 and year 1955.
@@ -39,8 +39,8 @@ This `retiring_titles.csv` is the summary table holds the retiring employees cou
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirees_count_per_title.png width="30%" height="30%">
 
 
-### 4) The Mentorship-Eligible Employee List (mentorship_eligibilty)
-The `mentorship_eligibilty.csv shows the list of employees who were born in the year 1965, which are considered as employees who are getting ready for the retirement and will be eligible for the mentorship program. (These eligible employees must be born between January 1, 1965 and December 31, 1965.)
+### 4) The Mentorship-Eligible Employee List (mentorship_eligibility)
+The `mentorship_eligibility.csv shows the list of employees who were born in the year 1965, which are considered as employees who are getting ready for the retirement and will be eligible for the mentorship program. (These eligible employees must be born between January 1, 1965 and December 31, 1965.)
 There are the total of 1,549 retiring employees who are eligible for this mentorship program.
 
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_table.png width="80%" height="80%">
