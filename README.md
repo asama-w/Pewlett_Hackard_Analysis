@@ -90,7 +90,7 @@ FROM all_emp_info;
 
 
 This table compares the total number of the mentors and the newly-hired employees by titles.
-From the table, the program may have a mentor shortage issue as this number only represents the eligibility to become a mentor, it cannot guarantee that every eligible employee will sign up for this mentorship program. Bobby's HR team can consider expanding the age citeria, or considering alternative qualifications other than ages for the mentorship-eligibity in order to increase the number of employees who can sign up for the program and help them share these imminent workload the employees may encounter, a.k.a the upcoming "silver tsunami". 
+From the table, the program may have a mentor shortage issue as this number only represents the eligibility to become a mentor, it cannot guarantee that every eligible employee will sign up for this mentorship program. Bobby's HR team can consider expanding the age criteria, or considering alternative qualifications other than ages for the mentorship-eligibilty in order to increase the number of employees who can sign up for the program and help them share these imminent workload the employees may encounter, a.k.a the upcoming "silver tsunami". 
 
 |Title|No. of Newly-hired (upcoming-vacant positions)|No. of Mentors|No. of Newly-hired per 1 mentor|
 |-----|:-----:|:---:|:---:|
