@@ -36,7 +36,16 @@ With the use of PostgresSQL, this analysis is carried out to help Bobby, who is 
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirees_count_per_title.png width="25%" height="25%">
 
 
-Adding the total percentage by title summary for the ease of analysis.
+4) `mentorship_eligibilty.csv` shows the list of employees who were born in the year 1965, which are considered as employees who are getting ready for the retirement and will be eligible for the mentorship program. (These eligible employees must be born between January 1, 1965 and December 31, 1965.)
+There are the total of 1,549 retiring employees who are eligible for this mentorship program.
+
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_table.png width="70%" height="70%">
+
+
+## Analysis Summary
+Additional queries to provide more insight of the data
+
+1) Adding the total retiring employee per title by percentage summary to the `retiring_titles` table for the clearer overview of the data. Largest percentage of the retiring employees are Senior Engineer and Senior Staff, whereas there are only two retirees who are Manager.
 
 ```sql
 -- Calculate Total Percentage by Title
@@ -48,15 +57,7 @@ The table is now shown as in the following image.
 
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiring_titles_w_percentage.png width="30%" height="30%">
 
-4) `mentorship_eligibilty.csv` shows the list of employees who were born in the year 1965, which are considered as employees who are getting ready for the retirement and will be eligible for the mentorship program. (These eligible employees must be born between January 1, 1965 and December 31, 1965.)
-There are the total of 1,549 retiring employees who are eligible for this mentorship program.
-
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_table.png width="70%" height="70%">
-
-
-## Analysis Summary
-Additional queries to provide more insight of the data
-1) Determine the number of membership-eligible employees per title are shown as follow.
+2) Determine the number of membership-eligible employees per title are shown as follow.
 ```sql
 -- Count number of eligible retiring employees for mentorship
 SELECT title, count(emp_no) as total_eligible_emp
@@ -68,7 +69,7 @@ Total nunmber of membership-eligible employees is 1,549.
 
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/membership_eligible_count_by_title.png width="30%" height="30%">
 
-2) Determine total number of employee in the company (no hired date boundary) for the comparison with the number of retiring employees
+3) Determine total number of employee in the company (no hired date boundary) for the comparison with the number of retiring employees
 
 ```sql
 -- Determine number of all current employees
@@ -78,11 +79,23 @@ FROM all_emp_info;
 
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/all_emp_count.png width="20%" height="20%">
 
-Note:
-Total number of the current employees (all ages) is 240,124.
-While there are 72,458 employees who will be retired in the near future, which is approximately 30.2% of the total number of all employees. Thus, there will be 72,458 vacant roles which need to be filled.
+Summary:
 
-However, the total number of those who are eligible for the mentorship program is only 1,549, which is 2.1% of the number of future newly-hired.
-No manager eligible for the mentorship
++ There are 72,458 employees who will be retired in the near future, which is approximately 30.2% of the total number of the current employees (all ages) of 240,124. Thus, there will be 72,458 vacant roles which need to be filled.
++ However, the total number of those who are eligible for the mentorship program is only 1,549 employees, which is 2.1% of the future newly-hired employees who will be filling the vacant positions of the retirees. The number of mentors are considerably lower than the newbies.
+
+
+This table compares the total number of the mentors and the newly-hired employees by titles.
+From the table, there is a mentor shortage issue
+
+|Title|No. of Newly-hired (upcoming-vacant positions)|No. of Mentors|No. of Newly-hired per 1 mentor|
+|-----|:-----:|:---:|:---:|
+|Senior Engineer|25,916|169|154|
+|Senior Staff|24,926|569|44|
+|Engineer|9,285|501|19|
+|Staff|7,636|155|50|
+|Technical Leader|3,603|77|47|
+|Assistant Engineer|1,090|78|14|
+|Manager|2|-|N/A|
 
 
