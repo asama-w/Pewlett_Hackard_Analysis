@@ -25,13 +25,13 @@ With the use of PostgresSQL, this analysis is carried out to help Bobby, who is 
 This `retirement_titles.csv` file is the complete list of the retirees including all of their titles during the years with the company, some of the employees have held several positions over the years, as seen in the duplicate of their name with different titles. There will be an excessive number of retiring employees if we were to count them  from this table due to the name duplications (the total number of retiring employee count from this table is 133,776). The following image shows the duplication of the employees name. Some employees changed positions over times so they have various titles under their names, while some employees remain in the same title up until the current period.
 
 <img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retirement_titles_table.png width="70%" height="70%">
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiree_count_w_query_dupl.png width="50%" height="50%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiree_count_w_query_dupl.png width="60%" height="60%">
 
 ### 2) The Retirement List with Unique Title (unique_titles)
 The `unique_titles.csv` contains the list of the retiring employees with only their most recent title. The duplication of their name has been removed, and only the current position is stored in the table. Using another query, the correct total number of retiring employees is 72,458. 
 
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/unique_titles_table.png width="50%" height="50%">
-<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiree_count_w_query_correct.png width="50%" height="50%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/unique_titles_table.png width="70%" height="70%">
+<img src= https://github.com/asama-w/Pewlett_Hackard_Analysis/blob/main/Additional_Images/retiree_count_w_query_correct.png width="60%" height="60%">
 
 ### 3) The Summary Retirement Count per Title (retiring_titles)
 This `retiring_titles.csv` is the summary table holds the retiring employees count per title, as shown in the following image. From the table, largest number of retiring employees are on the senior level (Senior Engineer and Senior Staff) which are accounted for 70.17% of total.
