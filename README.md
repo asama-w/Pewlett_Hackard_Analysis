@@ -101,7 +101,7 @@ FROM all_emp_info;
 ### Summary:
 
 + There are 72,458 employees who will be retired in the near future, which is approximately 30.2% of the total number of the current employees (all ages) of 240,124. Thus, there will be 72,458 vacant roles which need to be filled.
-+ However, the total number of those who are eligible for the mentorship program is only 1,549 employees, which is 2.1% of the future newly-hired employees who will be filling the vacant positions of the retirees. The number of mentors are considerably lower than the newbies.
++ However, only 1,549 employees are eligible for the mentorship program, which is 2.1% of the future newly-hired employees who will be filling the vacant positions of the retirees. The number of mentors are considerably lower than the newbies.
 
 
 This table compares the total number of the mentors and the newly-hired employees by titles.
